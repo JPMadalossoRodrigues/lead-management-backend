@@ -6,7 +6,7 @@ import {
 
 import { ClassificationProducer } from './classification.producer';
 import { ExecutionStatus, LeadStatus } from '@prisma/client';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 
 @Injectable()
 export class ClassificationService {

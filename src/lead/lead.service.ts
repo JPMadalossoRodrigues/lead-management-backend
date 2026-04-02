@@ -9,7 +9,7 @@ import { cnpj } from 'cpf-cnpj-validator';
 
 import { Prisma } from '@prisma/client';
 import { LeadStatus } from '@prisma/client/edge';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 import { CreateLeadDto } from './dtos/create-lead.dto';
 import { UpdateLeadDto } from './dtos/update-lead.dto';
 import { FilterLeadsDto } from './dtos/filter-leads.dto';

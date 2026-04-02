@@ -6,7 +6,7 @@ import {
 
 import { EnrichmentProducer } from './enrichment.producer';
 import { ExecutionStatus, LeadStatus } from '@prisma/client';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 
 @Injectable()
 export class EnrichmentService {

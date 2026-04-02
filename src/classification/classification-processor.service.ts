@@ -5,7 +5,7 @@ import {
   CommercialPotential,
   LeadStatus,
 } from '@prisma/client/edge';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 
 type ClassificationResult = {
   score: number;

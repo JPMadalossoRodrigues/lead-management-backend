@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ExecutionStatus, Prisma, LeadStatus } from '@prisma/client/edge';
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 
 @Injectable()
 export class EnrichmentProcessorService {

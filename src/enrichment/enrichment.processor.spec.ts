@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi, Mock } from 'vitest';
 
-import { PrismaService } from 'prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 import { EnrichmentProcessorService } from './enrichment-processor.service';
 
 describe('EnrichmentProcessorService', () => {
