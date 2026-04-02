@@ -187,6 +187,7 @@ ${JSON.stringify(input)}
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: 'tinyllama',
+        format: 'json',
         prompt,
         stream: false,
       }),
