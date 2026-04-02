@@ -30,7 +30,14 @@ describe('LeadsService', () => {
   it('should create a lead', async () => {
     prisma.lead.create.mockResolvedValue({ id: 1 });
 
-    const result = await service.create({} as never);
+    const result = await service.create({
+      email: 'test@email.com',
+      fullName: 'John Doe',
+      companyName: 'Test',
+      companyCnpj: '11222333000181',
+      phone: '123456',
+      source: 'WEBSITE',
+    });
 
     expect(result.id).toBe(1);
   });

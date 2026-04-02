@@ -70,9 +70,10 @@ describe('EnrichmentProcessorService', () => {
       };
     };
 
-    const call = prisma.enrichment.update.mock
-      .calls[0][0] as EnrichmentUpdateArgs;
+    const calls = prisma.enrichment.update.mock.calls;
 
-    expect(call.data.status).toBe('FAILED');
+    const lastCall = calls[calls.length - 1][0] as EnrichmentUpdateArgs;
+
+    expect(lastCall.data.status).toBe('FAILED');
   });
 });

@@ -11,6 +11,9 @@ describe('ClassificationProcessorService', () => {
       findUnique: Mock;
       update: Mock;
     };
+    enrichment: {
+      findFirst: Mock;
+    };
     lead: {
       update: Mock;
     };
@@ -21,6 +24,9 @@ describe('ClassificationProcessorService', () => {
       classification: {
         findUnique: vi.fn(),
         update: vi.fn(),
+      },
+      enrichment: {
+        findFirst: vi.fn(),
       },
       lead: {
         update: vi.fn(),
@@ -37,6 +43,10 @@ describe('ClassificationProcessorService', () => {
       id: 1,
       enrichment: { data: {} },
       lead: {},
+    });
+
+    prisma.enrichment.findFirst.mockResolvedValue({
+      data: {},
     });
 
     global.fetch = vi.fn().mockResolvedValue({

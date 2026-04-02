@@ -11,6 +11,7 @@ describe('ClassificationService', () => {
       update: Mock;
     };
     classification: {
+      findFirst: Mock;
       create: Mock;
       update: Mock;
     };
@@ -27,6 +28,7 @@ describe('ClassificationService', () => {
         update: vi.fn(),
       },
       classification: {
+        findFirst: vi.fn(),
         create: vi.fn(),
         update: vi.fn(),
       },
@@ -49,7 +51,7 @@ describe('ClassificationService', () => {
     });
 
     prisma.classification.create.mockResolvedValue({ id: 1 });
-
+    prisma.classification.findFirst.mockResolvedValue(null);
     await service.requestClassification(1);
 
     expect(producer.sendToQueue).toHaveBeenCalled();
