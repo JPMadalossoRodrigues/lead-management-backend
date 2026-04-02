@@ -18,6 +18,7 @@ model Lead {
   estimatedValue  Float?
   source          Source
   status          LeadStatus @default(PENDING)
+  notes           String?
 
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
@@ -71,9 +72,10 @@ enum LeadStatus {
   PENDING
   ENRICHING
   ENRICHED
+  ENRICHMENT_FAILED
   CLASSIFYING
   CLASSIFIED
-  FAILED
+  CLASSIFICATION_FAILED
 }
 
 enum ExecutionStatus {
